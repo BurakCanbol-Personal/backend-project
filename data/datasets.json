@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "subject_01",
+        "uploaded_by": "admin",
+        "status": "processed",
+        "results": {
+            "alpha_power": 0.55,
+            "theta_power": 0.92
+        }
+    },
+    {
+        "id": 2,
+        "name": "Burak_Canbol",
+        "uploaded_by": "admin",
+        "status": "raw"
+    }
+]
