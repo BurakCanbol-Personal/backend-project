@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+app.log
+
+data/datasets.json
+data/users.json
