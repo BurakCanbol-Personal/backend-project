@@ -5,14 +5,29 @@
         "uploaded_by": "admin",
         "status": "processed",
         "results": {
-            "alpha_power": 0.55,
-            "theta_power": 0.92
-        }
+            "alpha_power": 0.12,
+            "theta_power": 0.02
+        },
+        "processed_at": "2026-04-26T12:48:38.365054"
     },
     {
         "id": 2,
         "name": "Burak_Canbol",
         "uploaded_by": "admin",
         "status": "raw"
+    },
+    {
+        "id": 3,
+        "name": "test_timestamp",
+        "uploaded_by": "admin",
+        "status": "raw",
+        "created_at": "2026-04-26T12:36:46.866013"
+    },
+    {
+        "id": 4,
+        "name": "timestamp_test",
+        "uploaded_by": "admin",
+        "status": "raw",
+        "created_at": "2026-04-26T12:48:38.351246"
     }
 ]

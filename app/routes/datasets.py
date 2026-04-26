@@ -4,6 +4,7 @@ from app.utils.data_handler import save_datasets
 from app.services.auth_service import has_permission
 from app.utils.logger import log_event
 from app.utils.data_handler import get_dataset_by_id
+from datetime import datetime
 
 
 datasets_bp = Blueprint("datasets", __name__)
@@ -66,7 +67,8 @@ def add_dataset():
         "id": len(datasets) + 1,
         "name": name.strip(),
         "uploaded_by": role,
-        "status": "raw"
+        "status": "raw",
+        "created_at": datetime.now().isoformat()
     }
     
     datasets.append(new_dataset)
@@ -79,9 +81,12 @@ def add_dataset():
         details={
             "role": role,
             "dataset_id": new_dataset["id"],
-            "dataset_name": new_dataset["name"]
+            "dataset_name": new_dataset["name"],
+            "created_at": new_dataset["created_at"]
         }
     )
+    
+    
     
     return jsonify(new_dataset), 201
     

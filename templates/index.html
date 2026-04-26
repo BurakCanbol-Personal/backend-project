@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Project UI</title>
+</head>
+<body>
+    <h1>Datasets</h1>
+    <ul id="datasets"></ul>
+
+    <script>
+        fetch('/datasets')
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('datasets');
+
+                data.forEach(d => {
+                    const item = document.createElement('li');
+
+                    let text = `ID: ${d.id} | Name: ${d.name} | Status: ${d.status}`;
+
+                    if (d.created_at) {
+                        text += ` | Created: ${d.created_at}`;
+                    }
+
+                    if (d.processed_at) {
+                        text += ` | Processed: ${d.processed_at}`;
+                    }
+
+                    if (d.results) {
+                        text += ` | Alpha: ${d.results.alpha_power}, Theta: ${d.results.theta_power}`;
+                    }
+
+                    item.innerText = text;
+                    list.appendChild(item);
+                });
+            });
+    </script>
+</body>
+</html>
