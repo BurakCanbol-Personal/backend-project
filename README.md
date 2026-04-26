@@ -67,7 +67,7 @@ docker run -p 5000:5000 -v "$(pwd)/data:/app/data" eeg-app
 
 ## 📸 Screenshot
 
-![UI Screenshot](Screenshot 2026-04-26 162146.png)
+![UI Screenshot](screenshot.png)
 
 
 ## 👤 Author
